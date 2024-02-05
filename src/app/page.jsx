@@ -100,11 +100,11 @@ export default function Home() {
               <div className="benefit">
                 <div>
                   <PiNumberSquareOneBold size={30}/>
-                  <h1>Years of experience</h1>
+                  <h1>Decades of experience</h1>
                 </div>
 
                 <p>
-                  With over 5 years of experience in the automotive industry, we
+                  With over 15 years of experience in the automotive industry, we
                   have gained a deep understanding of panel beating and
                   collision corrections. Our technicians stay updated with the
                   latest industry techniques to deliver top-notch services.

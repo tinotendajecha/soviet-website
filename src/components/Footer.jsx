@@ -1,57 +1,60 @@
 import React from "react";
 import "./styles/footer.css";
-import { FaEnvelope, FaFacebook, FaInstagram, FaLocationArrow, FaPhone, FaWhatsapp } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLocationArrow,
+  FaPhone,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { TiLocation } from "react-icons/ti";
+import { MdOutlineLocationOn } from "react-icons/md";
 import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <div>
+      <div className="footer-container">
         <h2>Address</h2>
         <div>
-          <FaLocationArrow />
+          <MdOutlineLocationOn />
           <p>186 Mutare Road on Citroen</p>
         </div>
 
         <div>
-          <div className="phone"><FaPhone />
-          <p>Call +263 774275959</p></div>  
+          <FaPhone />
+          <p>Call +263 774275959</p>
+        </div>
 
-          <div className="phone"><FaPhone />
-          <p>Call +263 776598955</p></div>  
+        <div className="phone">
+          <FaPhone />
+          <p>Call +263 776598955</p>
         </div>
 
         <div className="email">
           <FaEnvelope />
           <p>sovietautoandbody@yahoo.com</p>
         </div>
+      </div>
 
-        <div className="socials">
-          <Link href=''>
-            <FaFacebook />
-          </Link>
-
-          <Link href=''>
-            <FaWhatsapp />
-          </Link>
-
-          <Link href=''>
-            <FaInstagram />
-          </Link>
+      <div className="socials">
+        <div className="footer-container">
+          <h2>Socials</h2>
         </div>
 
         <div className="links">
-          <Link href=''>Home</Link>
-          <Link href=''>About</Link>
-          <Link href=''>Services</Link>
-          <Link href=''>Contact Us</Link>
-        </div>
+          <Link href="">
+            <FaFacebook size={30}/>
+          </Link>
 
-        <div className="subscribe">
-          <h2>Subscribe to our email notifications</h2>
-          <form action="">
-            <input type="text" placeholder="Enter Email"/>
-          </form>
+          <Link href="">
+            <FaWhatsapp size={30} />
+          </Link>
+
+          <Link href="">
+            <FaInstagram size={30} />
+          </Link>
         </div>
       </div>
     </div>
