@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Illustration from "../../public/illustration-repair.svg";
+import Map from "@/components/Map";
+
 import {
   FaCar,
   FaAngleRight,
@@ -84,63 +85,156 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="why-choose-us-section">
+      {/* <div className="why-choose-us-section">
         <div className="heading">
           <h2>Why Choose Us</h2>
-          <span></span>
+          <span className="border-b-2 border-blue-500"></span>
         </div>
 
-        <div className="benefits-image-container">
-          <div className="image-container">
-            <Image src={rimImg} className="image rim-image" alt="Image of a rim" />
+        <div className="lg:flex">
+          <div className="lg:w-1/2">
+            <div className="image-container">
+              <div className="h-full">
+                <Image
+                  src={rimImg}
+                  className="object-cover h-full"
+                  alt="Image of a rim"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="benefits-section">
-            <div className="benefit-container">
-              <div className="benefit">
-                <div>
-                  <PiNumberSquareOneBold size={30}/>
-                  <h1>Decades of experience</h1>
+          <div className="lg:w-1/2 lg:pl-8">
+            <div className="benefits-section">
+              <div className="benefit-container space-y-6">
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareOneBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">Decades of experience</h1>
+                  </div>
+
+                  <p>
+                    With over 15 years of experience in the automotive industry,
+                    we have gained a deep understanding of panel beating and
+                    collision corrections. Our technicians stay updated with the
+                    latest industry techniques to deliver top-notch services.
+                  </p>
                 </div>
 
-                <p>
-                  With over 15 years of experience in the automotive industry, we
-                  have gained a deep understanding of panel beating and
-                  collision corrections. Our technicians stay updated with the
-                  latest industry techniques to deliver top-notch services.
-                </p>
-              </div>
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareTwoBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">Quality Workmanship</h1>
+                  </div>
 
-              <div className="benefit">
-                <div>
-                  <PiNumberSquareTwoBold size={30}/>
-                  <h1>Quality Workmanship</h1>
+                  <p>
+                    Our team of highly skilled technicians ensures meticulous
+                    attention to detail, delivering flawless results every time.
+                    With our commitment to quality, your vehicle will be
+                    restored to its original condition.
+                  </p>
                 </div>
 
-                <p>
-                  Our team of highly skilled technicians ensures meticulous
-                  attention to detail, delivering flawless results every time.
-                  With our commitment to quality, your vehicle will be restored
-                  to its original condition.
-                </p>
-              </div>
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareThreeBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">
+                      Cutting-Edge Equipment
+                    </h1>
+                  </div>
 
-              <div className="benefit">
-                <div>
-                  <PiNumberSquareThreeBold size={30}/>
-                  <h1>Cutting-Edge Equipment</h1>
+                  <p>
+                    Our workshop is equipped with the latest technology,
+                    allowing us to provide precise and efficient repairs. This
+                    ensures quick turnaround times and exceptional results for
+                    our customers.
+                  </p>
                 </div>
-
-                <p>
-                  Our workshop is equipped with the latest technology, allowing
-                  us to provide precise and efficient repairs. This ensures
-                  quick turnaround times and exceptional results for our
-                  customers.
-                </p>
               </div>
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="why-choose-us-sectionn">
+        <div className="heading">
+          <h2>Why Choose Us</h2>
+          <span className="border-b-2 border-blue-500"></span>
+        </div>
+
+        <div className="grid lg:grid-cols-2 lg:gap-8 mt-10">
+          <div className="image-container">
+            <div className="h-full">
+              <Image
+                src={rimImg}
+                className="object-cover h-full rounded-lg w-full "
+                alt="Image of a rim"
+                
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="benefits-section">
+              <div className="benefit-container space-y-6">
+                {/* Benefits code goes here */}
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareOneBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">Decades of experience</h1>
+                  </div>
+
+                  <p>
+                    With over 15 years of experience in the automotive industry,
+                    we have gained a deep understanding of panel beating and
+                    collision corrections. Our technicians stay updated with the
+                    latest industry techniques to deliver top-notch services.
+                  </p>
+                </div>
+
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareTwoBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">Quality Workmanship</h1>
+                  </div>
+
+                  <p>
+                    Our team of highly skilled technicians ensures meticulous
+                    attention to detail, delivering flawless results every time.
+                    With our commitment to quality, your vehicle will be
+                    restored to its original condition.
+                  </p>
+                </div>
+
+                <div className="benefit">
+                  <div className="flex items-center">
+                    <PiNumberSquareThreeBold size={30} className="mr-2" />
+                    <h1 className="text-xl font-bold">
+                      Cutting-Edge Equipment
+                    </h1>
+                  </div>
+
+                  <p>
+                    Our workshop is equipped with the latest technology,
+                    allowing us to provide precise and efficient repairs. This
+                    ensures quick turnaround times and exceptional results for
+                    our customers.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="heading">
+          <h2>Our Location</h2>
+          <span></span>
+        </div>
+
+        <Map />
       </div>
     </div>
   );

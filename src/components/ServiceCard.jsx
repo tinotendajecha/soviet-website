@@ -13,12 +13,6 @@ const ServiceCard = ({ icon, title, description }) => {
         </div>
         <p className="description">{description}</p>
       </div>
-      {/* <div>
-        <Link href="/services">
-            <button>Learn More</button>
-        </Link>
-        <FaAngleRight />
-      </div> */}
     </div>
   );
 };
