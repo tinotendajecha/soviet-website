@@ -12,15 +12,6 @@
     --paragraph-color: #636363;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-
 .welcome-section{
   background-color: #364463;
   background-image: url('../../public/optimized-car2.jpg');
@@ -137,30 +128,10 @@
   margin-top: 20px;
 }
 
-.image-container{
-  padding: 7px;
-}
-
 .rim-image{
   border-radius: 5px;
 }
 
-.benefit-container{
-  padding: 7px;
-}
-.benefit{
-  margin-bottom: 20px;
-}
-.benefit div{
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bolder;
-  gap: 10px;
-}
-.benefit p{
-  color: var(--paragraph-color);
-}
 .map{
   display: flex;
   justify-content: center;
@@ -252,6 +223,28 @@ input{
   border-radius: 5px;
 }
 
+/* flex box showing image and numbered points */
+.benefit-parent h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+.benefit-parent p{
+  color: var(--paragraph-color);
+}
+
+/* On the about us page */
+.mission-parent h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+.mission-parent p{
+  color: var(--paragraph-color);
+}
+
+.mission-parent{
+  padding: 10px
+}
+
 @media (min-width: 841px){
   .cards{
     display: flex;
@@ -266,10 +259,6 @@ input{
   .learn-more-container{
     font-size: 20px;
   }
-  /* .about-section{
-    display: flex;
-    flex-direction: column;
-  } */
 }
 
 .outer-div{
@@ -300,18 +289,6 @@ input{
     width: 400px;
     margin: 10px;
   }
-  .benefits-image-container{
-    display: flex;
-    margin-top: 30px;
-  }
-  .benefit-container{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .benefit div{
-    font-size: 22px;
-  }
   .why-choose-us-section{
     padding-left: 40px;
     padding-right: 40px;
@@ -338,10 +315,47 @@ input{
     justify-content: center;
     margin-bottom: 40px;
   }
-  /* .benefits-section{
-    width: 100%;
+  .benefit-parent{
+    padding: 10px
+  }
+  .benefit-parent h1{
+    font-size: 22px
+  }
+
+  .benefit-parent p{
+    font-size: 16px;
+  }
+
+  /* for the about page */
+  .mission-parent{
+    padding: 10px
+  }
+  .mission-parent h1{
+    font-size: 22px
+  }
+
+  .mission-parent p{
+    font-size: 16px;
+  }
+  /* .second-flex{
+    display: flex;
   } */
+  .mission-wrapper{
+    width: 100%;
+  }
   
+}
+
+@media (min-width: 1130px) {
+  .flex-wrapper{
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .second-flex{
+    display: flex;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -349,37 +363,5 @@ input{
     width: 500px;
     margin: 10px;
   }
-  /* .about-section{
-    display: flex;
-    flex-direction: row;
-  }
-*/
-  /* .about-container{
-    width: 50%;
-  } */
-  .benefits-section{
-    width: 100%;
-  }
-  
-  /* 
-  .image-container{
-    width: 100%;
-  } 
-  .rim-image{
-    width: 80%;
-  }  */
 }
 
-/* @media (min-width: 1300px) {
-  .about-section{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .about-container{
-    width: 50%;
-  }
-  .image-container{
-    width: 50%;
-  }
-} */

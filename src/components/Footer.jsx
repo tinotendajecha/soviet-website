@@ -68,7 +68,7 @@ const Footer = () => {
 
       <div className="second-footer-section">
         <span className="attribution">
-        © 2024 Soviet Auto and Body, <a href="http://tinotendajecha.dev" target='_blank'>Developers</a>
+        © 2024 Soviet Auto and Body
         </span>
       </div>
     </div>
