@@ -47,11 +47,8 @@ const page = () => {
 
         <Serviceopp
           imageUrl={fleet}
-          title="Panel beating"
-          description="Our skilled technicians specialize in panel beating, restoring your
-            vehicle's body to its original condition. We employ advanced
-            techniques and tools to repair dents, scratches, and other damages,
-            ensuring a seamless finish."
+          title="Fleet Maintenance"
+          description="We understand the importance of keeping your fleet in optimal condition. Our fleet maintenance services encompass routine inspections, preventive maintenance, and timely repairs, ensuring maximum uptime and minimizing operational disruptions."
         />
 
         <Service
