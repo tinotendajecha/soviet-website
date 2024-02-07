@@ -6,11 +6,9 @@
     width: 100%;
 
 }
-
-
 .sticky-nav {
     opacity: 0;
-    max-height: 200px;
+    max-height: 250px;
     overflow: hidden;
     transition: opacity 0.3s ease, max-height 0.3s ease;
   }

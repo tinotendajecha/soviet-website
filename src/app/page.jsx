@@ -17,10 +17,14 @@ import {
   PiNumberSquareTwoBold,
   PiNumberSquareThreeBold,
 } from "react-icons/pi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="primary-container">
+    <div className="primary-container ">
+      {/* <div className="whatsapp">
+        <FaWhatsapp />
+      </div> */}
       <div className="sub-container landing-section ">
         <div className="welcome-section">
           <h1>Welcome to Soviet Auto & Body</h1>

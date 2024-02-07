@@ -1,13 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaHamburger } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import "./styles/header.css";
 import { IoClose } from "react-icons/io5";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+
+  const pathName = usePathname()
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  console.log(pathName)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -37,17 +42,17 @@ const Header = () => {
         </div>
 
         <div className="hidden lg:block">
-          <ul className="flex space-x-4 text-white">
-            <li>
+          <ul className="flex space-x-4 text-white items-center">
+            <li className={pathName === '/' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li className={pathName === '/services' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
               <Link href="/services">Services</Link>
             </li>
-            <li>
+            <li className={pathName === '/about' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
               <Link href="/about">About</Link>
             </li>
-            <li>
+            <li className={pathName === '/contact' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
               <Link href="/contact">Contact Us</Link>
             </li>
           </ul>
@@ -58,53 +63,36 @@ const Header = () => {
         </button>
       </div>
 
-      {/* {isMenuOpen && (
-        <div className="lg:hidden bg-gray-800 p-4 sticky-nav">
-          <ul className="flex flex-col space-y-4 text-white">
-            <li>
-              <Link href="/" onClick={toggleMenu}>Home</Link>
-            </li>
-            <li>
-              <Link href="/services" onClick={toggleMenu}>Services</Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={toggleMenu}>About</Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={toggleMenu}>Contact Us</Link>
-            </li>
-          </ul>
-
-          
-        </div>
-      )} */}
 
       <div
         className="lg:hidden bg-gray-800 p-4 sticky-nav"
         style={{ opacity: isMenuOpen ? 1 : 0 }}
       >
         <ul className="flex flex-col space-y-4 text-white">
-          <li>
+          <li className={pathName === '/' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
             <Link href="/" onClick={toggleMenu}>
               Home
             </Link>
           </li>
-          <li>
+          <li className={pathName === '/services' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
             <Link href="/services" onClick={toggleMenu}>
               Services
             </Link>
           </li>
-          <li>
+          <li className={pathName === '/about' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
             <Link href="/about" onClick={toggleMenu}>
               About
             </Link>
           </li>
-          <li>
+          <li className={pathName === '/contact' ? 'text-blue-500 text-lg transition duration-200 ease-in' : 'text-white'}>
             <Link href="/contact" onClick={toggleMenu}>
               Contact Us
             </Link>
           </li>
         </ul>
+        <button className="md:hidden bg-blue-500 text-white px-2 py-1 rounded flex items-center gap-2 mt-2">
+          <FaPhoneAlt /> 0776 598 955
+        </button>
       </div>
     </div>
   );
