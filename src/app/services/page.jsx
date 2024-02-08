@@ -2,9 +2,10 @@ import React from "react";
 import carBodyWorkImg from "../../../public/car-body-work.jpg";
 import Service from "@/components/service";
 import Serviceopp from "@/components/serviceopp";
-import manPouringOil from '../../../public/man-pouring-oil.jpg'
 import carDealership from '../../../public/dealership.jpg'
 import fleet from '../../../public/fleet.jpg'
+import tow from '../../../public/tow.jpg'
+import crash from '../../../public/crash.jpg'
 
 const page = () => {
   return (
@@ -34,7 +35,7 @@ const page = () => {
         />
 
         <Serviceopp
-          imageUrl={manPouringOil}
+          imageUrl={crash}
           title="Collision Corrections"
           description="In the unfortunate event of a collision, trust our team to handle the necessary repairs with precision and care. We offer comprehensive collision correction services, including frame straightening, dent removal, and paintwork, restoring your vehicle's structural integrity and appearance."
         />
@@ -52,7 +53,7 @@ const page = () => {
         />
 
         <Service
-          imageUrl={fleet}
+          imageUrl={tow}
           title="Towing Services"
           description="When you have a car break down, we are just a phone call away, At Soviet we provide towing service in and out of town, distance is not a barrier to us, feel free to call when you need quick towing service nomatter where you are."
         />
