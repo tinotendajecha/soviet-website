@@ -53,18 +53,18 @@ const page = () => {
 
         <Service
           imageUrl={fleet}
-          title="Fleet Maintenance"
-          description="We understand the importance of keeping your fleet in optimal condition. Our fleet maintenance services encompass routine inspections, preventive maintenance, and timely repairs, ensuring maximum uptime and minimizing operational disruptions."
+          title="Towing Services"
+          description="When you have a car break down, we are just a phone call away, At Soviet we provide towing service in and out of town, distance is not a barrier to us, feel free to call when you need quick towing service nomatter where you are."
         />
 
-        <Serviceopp
+        {/* <Serviceopp
           imageUrl={carBodyWorkImg}
           title="Panel beating"
           description="Our skilled technicians specialize in panel beating, restoring your
             vehicle's body to its original condition. We employ advanced
             techniques and tools to repair dents, scratches, and other damages,
             ensuring a seamless finish."
-        />
+        /> */}
       </div>
     </div>
   );

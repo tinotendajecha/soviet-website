@@ -38,9 +38,11 @@ export default function Home() {
             your automotive needs.
           </p>
 
-          <button className="button welcome-button">
-            Read More <FaAngleRight className="welcome-right-angle" />
+          <Link href='#second-section'>
+          <button className="button welcome-button hover:text-white hover:bg-blue-500 transition transition-duration:200 ease-in-out">
+            Read More <FaAngleRight className="welcome-right-angle mb-0.5" />
           </button>
+          </Link>
         </div>
 
         {/* <div>
@@ -48,7 +50,7 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="sub-container brief-services">
+      <div className="sub-container brief-services" id="second-section">
         <div className="heading">
           <h1>Services We Offer</h1>
           <span></span>

@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa";
 
 const ServiceCard = ({ icon, title, description }) => {
   return (
-    <div className="service-card">
+    <div className="service-card hover:bg-slate-100">
       <div className="info-container">
         <div className="title-container">
         <div className="icon">{icon}</div>

@@ -1,23 +1,65 @@
 "use client";
 import Map from "@/components/Map";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const page = () => {
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [subject, setSubject] = useState("");
+  const [isDataSent, setIsDataSent] = useState(null);
+  // const [validationError, setValidationError] = useState(false);
+  const [emptyValueValidation, setEmptyValueValidation] = useState(false);
+  const [networkError, setNetworkError] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault()
+  useEffect(() => {
+    // console.log(isDataSent)
+    if (isDataSent == "Success") {
+      toast.success(
+        "Thank you for reaching out, we will be in touch! 🙂"
+      );
+      setFullName("");
+      setPhoneNumber("");
+      setSubject("");
+    }
+  }, [isDataSent, emptyValueValidation]);
 
-    console.log({
-      name : fullName,
+  useEffect(() => {
+    if (networkError) {
+      toast.error("Please check your internet connection, reload the page and try again! 🙁");
+    }
+  }, [networkError]);
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    if (fullName == "" || phoneNumber == "" || subject == "") {
+      setEmptyValueValidation(true);
+      toast.error("Please fill in all fields!");
+      toast.error();
+      return;
+    }
+
+    const data = {
+      fullName,
       phoneNumber,
-      subject
-    })
+      subject,
+    };
 
-  }
+    axios
+      .post("http://localhost:3000/api/sendEmail", data)
+      .then((res) => {
+        setIsDataSent(res.data.message);
+        console.log(res)
+      })
+      .catch((err) => {
+        // console.log(`Error occured: ${err}`);
+        setNetworkError(true);
+      });
+  };
 
   return (
     <div>
@@ -46,12 +88,22 @@ const page = () => {
 
         <div>
           <div className="input-container">
-            <input type="text" value={fullName} placeholder="Your Name" onChange={(e) => {
-              setFullName(e.target.value)
-            }}/>
-            <input type="text" value={phoneNumber} placeholder="Phone Number" onChange={(e) => {
-              setPhoneNumber(e.target.value)
-            }} />
+            <input
+              type="text"
+              value={fullName}
+              placeholder="Your Name"
+              onChange={(e) => {
+                setFullName(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              value={phoneNumber}
+              placeholder="Phone Number"
+              onChange={(e) => {
+                setPhoneNumber(e.target.value);
+              }}
+            />
           </div>
           <textarea
             value={subject}
@@ -60,18 +112,21 @@ const page = () => {
             rows="10"
             placeholder="Subject"
             onChange={(e) => {
-              setSubject(e.target.value)
+              setSubject(e.target.value);
             }}
           ></textarea>
         </div>
         <div className="btn-container">
-          <button className="submit-btn" type="submit">Submit</button>
+          <button className="submit-btn hover:text-white hover:bg-blue-500 transition transition-duration:200 ease-in-out" type="submit">
+            Submit
+          </button>
         </div>
       </form>
 
       <div>
         <Map />
       </div>
+      <ToastContainer />
     </div>
   );
 };

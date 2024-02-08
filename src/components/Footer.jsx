@@ -55,7 +55,7 @@ const Footer = () => {
               <FaFacebook size={30} />
             </Link>
 
-            <Link href="">
+            <Link target="_blank" href="https://wa.me/263776598955?text=Hi!%20I%20would%20a%20like%20to%20inquire%20about...">
               <FaWhatsapp size={30} />
             </Link>
 
