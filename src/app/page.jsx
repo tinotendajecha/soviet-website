@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Map from "@/components/Map";
 
+
 import {
   FaCar,
   FaAngleRight,
@@ -108,12 +109,12 @@ export default function Home() {
             <div>
               <div className="benefits-wrapper">
                 <div className="benefit-parent">
-                  <div className="flex items-center py-2">
+                  <div className="flex items-center py-2 px-2">
                     <PiNumberSquareOneBold size={30} />
                     <h1 className="point">Decades of experience</h1>
                   </div>
 
-                  <p className="px-2">
+                  <p className="px-3">
                     With over 15 years of experience in the automotive industry,
                     we have gained a deep understanding of panel beating and
                     collision corrections. Our technicians stay updated with the
@@ -122,12 +123,12 @@ export default function Home() {
                 </div>
 
                 <div className="benefit-parent">
-                  <div className="flex items-center py-2">
+                  <div className="flex items-center py-2 px-2">
                     <PiNumberSquareTwoBold size={30} />
                     <h1 className="point">Quality Workmanship</h1>
                   </div>
 
-                  <p className="px-2">
+                  <p className="px-3">
                     Our team of highly skilled technicians ensures meticulous
                     attention to detail, delivering flawless results every time.
                     With our commitment to quality, your vehicle will be
@@ -136,12 +137,12 @@ export default function Home() {
                 </div>
 
                 <div className="benefit-parent">
-                  <div className="flex items-center py-2">
+                  <div className="flex items-center py-2 px-2">
                     <PiNumberSquareThreeBold size={30} />
                     <h1 className="point">Cutting-Edge Equipment</h1>
                   </div>
 
-                  <p className="px-2">
+                  <p className="px-3">
                     Our workshop is equipped with the latest technology,
                     allowing us to provide precise and efficient repairs. This
                     ensures quick turnaround times and exceptional results for
