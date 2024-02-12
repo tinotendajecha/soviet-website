@@ -34,8 +34,8 @@ export default async function handler(req, res) {
     const resend = new Resend("re_DLbewPR7_3ZnWHX1YGymYrbgTEC3vERaQ");
 
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: ["sovietautoandbody@yahoo.com"],
+      from: "sovietautoandbody.co.zw",
+      to: ["tinotendajecha@gmail.com"],
       subject: `New email from ${fullName}`,
       html: `<p>${subject}. This is my phone number ${phoneNumber}</p>`,
     });
