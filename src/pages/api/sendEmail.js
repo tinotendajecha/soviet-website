@@ -31,11 +31,12 @@ export default async function handler(req, res) {
   try {
     const { fullName, phoneNumber, subject } = req.body;
 
-    const resend = new Resend("re_DLbewPR7_3ZnWHX1YGymYrbgTEC3vERaQ");
+    // const resend = new Resend("re_DLbewPR7_3ZnWHX1YGymYrbgTEC3vERaQ");
+    const resend = new Resend("re_j3A4Ar9A_KT1TTM3XKXdATAwaftHRALZ8");
 
     const { data, error } = await resend.emails.send({
-      from: "sovietautoandbody.co.zw",
-      to: ["tinotendajecha@gmail.com"],
+      from: "soviet@sovietautoandbody.co.zw",
+      to: ["sovietautoandbody@yahoo.com"],
       subject: `New email from ${fullName}`,
       html: `<p>${subject}. This is my phone number ${phoneNumber}</p>`,
     });
