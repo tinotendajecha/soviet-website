@@ -49,8 +49,9 @@ const page = () => {
       subject,
     };
 
+    // http://localhost:3000/api/sendEmail - Replace this in local env
     axios
-      .post("http://localhost:3000/api/sendEmail", data)
+      .post("https://sovietautoandbody.co.zw/api/sendEmail", data)
       .then((res) => {
         setIsDataSent(res.data.message);
         console.log(res)
