@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Map from "@/components/Map";
 
+import image1 from '../../public/image1.jpg';
+import colli from '../../public/colli.jpg';
+import sales from '../../public/sales.jpg';
+import fleettt from '../../public/fleettt.jpg';
+
 
 import {
   FaCar,
@@ -12,7 +17,8 @@ import {
 } from "react-icons/fa";
 import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
-import rimImg from "../../public/rim.jpg";
+import secondImg from "../../public/second-image-test.jpg";
+
 import {
   PiNumberSquareOneBold,
   PiNumberSquareTwoBold,
@@ -58,25 +64,29 @@ export default function Home() {
         </div>
         <div className="cards">
           <ServiceCard
-            icon={<FaCarCrash size={70} />}
+            // icon={<FaCarCrash size={70} />}
+            icon={image1}
             title="Panel Beating"
             description="Our skilled technicians specialize in panel beating, restoring your vehicle's body to its original condition. We employ advanced techniques and tools to repair dents, scratches, and other damages, ensuring a seamless finish."
           />
 
           <ServiceCard
-            icon={<FaExclamationTriangle size={70} />}
+            // icon={<FaExclamationTriangle size={70} />}
+            icon={colli}
             title="Collision Corrections"
             description="In the unfortunate event of a collision, trust our team to handle the necessary repairs with precision and care. We offer comprehensive collision correction services, including frame straightening, dent removal, and paintwork, restoring your vehicle's structural integrity and appearance."
           />
 
           <ServiceCard
-            icon={<FaCar size={70} />}
+            // icon={<FaCar size={70} />}
+            icon={sales}
             title="Vehicle Sales"
             description="Looking for a reliable vehicle? Explore our extensive inventory of quality pre-owned vehicles. Each vehicle undergoes thorough inspections, ensuring they meet our stringent quality standards. With competitive pricing and transparent transactions, we strive to make your vehicle purchase a hassle-free experience."
           />
 
           <ServiceCard
-            icon={<FaWrench size={70} />}
+            // icon={<FaWrench size={70} />}
+            icon={fleettt}
             title="Fleet Maintenance"
             description="We understand the importance of keeping your fleet in optimal condition. Our fleet maintenance services encompass routine inspections, preventive maintenance, and timely repairs, ensuring maximum uptime and minimizing operational disruptions.
             "
@@ -102,7 +112,7 @@ export default function Home() {
           <div className="flex-wrapper">
             <div className="p-3 ">
               <div className="image-parent">
-                <Image className="rounded-lg" src={rimImg} alt="Image of a rim" />
+                <Image className="rounded-lg" src={secondImg} alt="Image of a rim" />
               </div>
             </div>
 

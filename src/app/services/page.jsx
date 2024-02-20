@@ -1,11 +1,11 @@
 import React from "react";
-import carBodyWorkImg from "../../../public/car-body-work.jpg";
+import carBodyWorkImg from "../../../public/carBodyWork.jpg";
 import Service from "@/components/service";
 import Serviceopp from "@/components/serviceopp";
-import carDealership from '../../../public/dealership.jpg'
-import fleet from '../../../public/fleet.jpg'
-import tow from '../../../public/tow.jpg'
-import crash from '../../../public/crash.jpg'
+import carDealership from '../../../public/carSale.jpg'
+import fleet from '../../../public/fleetmaint.jpg'
+import tow from '../../../public/towingService.jpg'
+import crash from '../../../public/collision.jpg'
 
 const page = () => {
   return (
