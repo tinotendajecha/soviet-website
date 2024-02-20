@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Soviet Auto And Body",
-  description: "This is a website for Auto and Body company.",
+  description: "Soviet auto and body is a workshop which speacialises with repairing cars and also vehicle sales located along Mutare road in Harare, Zimbabwe",
 };
 
 export default function RootLayout({ children }) {
