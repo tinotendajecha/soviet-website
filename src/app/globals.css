@@ -12,6 +12,10 @@
     --paragraph-color: #636363;
 }
 
+*{
+  display: none;
+}
+
 .welcome-section{
   background-color: #667593;
   background-image: url('../../public/first-image.jpg');
